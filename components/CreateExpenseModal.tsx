@@ -27,9 +27,8 @@ export const CreateExpenseModal = () => {
   );
 
   const addRecordHandler = () => {
-    console.log(expense, "ex");
-    console.log(selectedCategory, "cat");
     dispatch(addExpense({ expense, category: selectedCategory }));
+    setVisible(false)
   };
 
   return (
