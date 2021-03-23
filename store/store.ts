@@ -1,4 +1,6 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
+import { categorySlice } from "./category";
+import { expenseSlice } from "./expense";
 
 const counterSlice = createSlice({
   name: "counter",
@@ -15,9 +17,12 @@ const counterSlice = createSlice({
   },
 });
 
-export const { incremented, decremented } = counterSlice.actions;
 export const selectCount = (state: any) => state.counter.value;
 
 export const store = configureStore({
-  reducer: { counter: counterSlice.reducer },
+  reducer: {
+    counter: counterSlice.reducer,
+    category: categorySlice.reducer,
+    expense: expenseSlice.reducer,
+  },
 });
