@@ -2,19 +2,18 @@ import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 
+import { Button } from '@ui-kitten/components';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { selectCount } from '../store/store';
+import { CreateExpenseModal } from '../components/CreateExpenseModal';
 
 export default function TabOneScreen() {
   const count = useSelector(selectCount)
   
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <Text>{count}</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <CreateExpenseModal />
     </View>
   );
 }

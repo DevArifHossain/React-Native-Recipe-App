@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "RN-Recipe-App",
-    "slug": "RN-Recipe-App",
+    "name": "RN-Expense-App",
+    "slug": "RN-Expense-App",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
