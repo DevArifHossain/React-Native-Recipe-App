@@ -7,7 +7,8 @@ import useCachedResources from "./hooks/useCachedResources";
 import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
 import { store } from "./store/store";
-import { ApplicationProvider } from "@ui-kitten/components";
+import { ApplicationProvider, Button, Icon } from "@ui-kitten/components";
+import DrawerNavigation from "./navigation/DrawerNavigation";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -20,7 +21,7 @@ export default function App() {
       <Provider store={store}>
         <ApplicationProvider {...eva} theme={eva.light}>
           <SafeAreaProvider>
-            <Navigation colorScheme={colorScheme} />
+            <DrawerNavigation />
             <StatusBar />
           </SafeAreaProvider>
         </ApplicationProvider>
